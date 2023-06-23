@@ -12,10 +12,10 @@
 	<button class="btn btn-lg btn-primary" onclick="something()" >Order Now</button>
 	<br><br>
 
-	<h2>Our pizzas:</h2>
+	<h1>Our pizzas:</h1>
 	<br>
 	<br>
-	<br>
+
 
 	<div class="container-md">	
 		<div class="row">
@@ -23,13 +23,13 @@
 		 		
 			 	<div class="col-4">
 			 		<div class="row">
-			 			<img src="<%= product.path_to_image %>" class="img-thumbnail" height="300">
+			 			<img src="<%= product.path_to_image %>" class="img-thumbnail" style="height: 200px; width: 200px">
 					</div>
 					<div class="row">
-						<%= product.id %>. <%= product.title %>
+						<h3><%= product.title %></h3>
 					</div>
 					<div class="row">
-						<%= product.price %> USD
+						<h4><%= product.price %> USD</h4>
 					</div>
 					<div class="row">
 						<%= product.size %> CM
