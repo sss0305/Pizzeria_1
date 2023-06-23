@@ -1,3 +1,46 @@
-<h2>Welcome to Pizzeria</h2>
-<button class="btn btn-lg btn-primary" onclick="something()" >Order Now</button>
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+	<h2>Welcome to Pizzeria</h2>
+	<button class="btn btn-lg btn-primary" onclick="something()" >Order Now</button>
+
+
+	<h2>Our pizzas:</h2>
+<% @products.each do |product| %>
+<p>
+	<%= product.id %>. <%= product.title %>. <%= product.price %>, <%= product.size %>
+</p>
+
+
+<% end %> 
+<br><br>
+	<div class="container-md">
+
+	  <div class="row">
+	    <div class="col-4">
+	      <img src="/images/hawaii.jpg" alt="pizza hawaii" class="img-responsive">
+	    </div>
+	    <div class="col-4">
+	      <img src="/images/pepperoni.jpg" alt="pizza hawaii" class="img-responsive">
+	    </div>
+	    <div class="col-4">
+	      <img src="/images/veggie.jpg" alt="pizza hawaii" class="img-responsive">
+	    </div>
+	  </div>
+	</div>
+	gsfdfsdfsd
+</body>
+</html>
+
+
+
+
+
 
