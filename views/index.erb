@@ -10,34 +10,39 @@
 <body>
 	<h2>Welcome to Pizzeria</h2>
 	<button class="btn btn-lg btn-primary" onclick="something()" >Order Now</button>
-
+	<br><br>
 
 	<h2>Our pizzas:</h2>
-<% @products.each do |product| %>
-<p>
-	<%= product.id %>. <%= product.title %>. <%= product.price %>, <%= product.size %>
-</p>
+	<br>
+	<br>
+	<br>
 
+	<div class="container-md">	
+		<div class="row">
+			<% @products.each do |product| %>
+		 		
+			 	<div class="col-4">
+			 		<div class="row">
+			 			<img src="<%= product.path_to_image %>" class="img-thumbnail" height="300">
+					</div>
+					<div class="row">
+						<%= product.id %>. <%= product.title %>
+					</div>
+					<div class="row">
+						<%= product.price %> USD
+					</div>
+					<div class="row">
+						<%= product.size %> CM
+					</div>
+				</div>
+			<% end %>
 
-<% end %> 
-<br><br>
-	<div class="container-md">
-
-	  <div class="row">
-	    <div class="col-4">
-	      <img src="/images/hawaii.jpg" alt="pizza hawaii" class="img-responsive">
-	    </div>
-	    <div class="col-4">
-	      <img src="/images/pepperoni.jpg" alt="pizza hawaii" class="img-responsive">
-	    </div>
-	    <div class="col-4">
-	      <img src="/images/veggie.jpg" alt="pizza hawaii" class="img-responsive">
-	    </div>
-	  </div>
+		</div>
 	</div>
-	gsfdfsdfsd
-</body>
-</html>
+
+
+
+
 
 
 
