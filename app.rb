@@ -13,11 +13,15 @@ class Product < ActiveRecord::Base
 end
 
 before do
-	@products = Product.all
+	
 end
 
 
 get '/' do
+	# @spicy = @products[is_spicy]
+	# if @spicy == false
+	# 	<% product.is_spicy %> 
+	@products = Product.all
 	erb :index 
 end
 

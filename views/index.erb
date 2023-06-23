@@ -19,25 +19,31 @@
 
 	<div class="container-md">	
 		<div class="row">
-			<% @products.each do |product| %>
-		 		
-			 	<div class="col-4">
+
+			<% @products.each do |p| %>
+			 	<div class="col-md-4">
 			 		<div class="row">
-			 			<img src="<%= product.path_to_image %>" class="img-thumbnail" style="height: 200px; width: 200px">
+			 			<img src="<%= p.path_to_image %>" class="img-thumbnail" style="height: 200px; width: 200px">
 					</div>
 					<div class="row">
-						<h3><%= product.title %></h3>
+						<h3><%= p.title %></h3>
 					</div>
 					<div class="row">
-						<h4><%= product.price %> USD</h4>
+						<p><%= p.description %></p>
 					</div>
 					<div class="row">
-						<%= product.size %> CM
+						<%= p.price %> USD
 					</div>
+					<div class="row">
+						<%= p.size %> CM
+					</div>
+					<br><br>
 				</div>
+
 			<% end %>
 
 		</div>
+
 	</div>
 
 
